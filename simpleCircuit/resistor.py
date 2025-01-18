@@ -1,12 +1,14 @@
-class resistor:
+class Resistor:
     def __init__(self, name:str,bus1:str, bus2:str, r:float):
         self.name = name
         self.bus1 = bus1
         self.bus2 = bus2
         self.r = r
+        self.g = 0.0
         self.g = self.calc_g()
+
     def calc_g(self):
-        return 1 / self.r if self.r != 0 else float('inf')
+        return 1 / self.r
 
 
 
