@@ -1,13 +1,20 @@
-class load:
-    def __init__(self, name: str, bus1: str, p:float,q:float):
+class Load:
+    def __init__(self, name: str, bus1: str, p:float,v:float):
        self.name = name
        self.bus1 = bus1
        self.p = p
-       self.q = q
-       self.g = self.calc_g()
+       self.v = v
+       #P = I*V  --> I = P/V
+       #V = IR   --> R = V/I
+       self.i = p/v
+       self.r = v/self.i
+       self.g = self.calc_g(self.r)
 
-    def calc_g(self):
-        return self.p / (self.p ** 2 + self.q ** 2) if (self.p != 0 or self.q != 0) else 0.0
+    def calc_g(self,r:float):
+        return 1/r
+
+
+
 
 
 
