@@ -15,7 +15,7 @@ class Solution:
 
         bus_a = self.circuit.buses[v_source.bus1]
         bus_a.set_bus_voltage(v_source.v)
-        bus_b = self.circuit.buses[list(self.circuit.buses.keys())[1]]  # Assuming Bus B is the second bus
+        bus_b = self.circuit.buses[list(self.circuit.buses.keys())[1]]
         bus_b.set_bus_voltage(bus_a.voltage - self.circuit.i * series_resistor.r)
 
         self.circuit.print_nodal_voltage()
