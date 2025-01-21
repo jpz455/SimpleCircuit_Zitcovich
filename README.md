@@ -1,27 +1,100 @@
-# SimpleCircuit_Zitcovich
+# **SimpleCircuit_Zitcovich**
 
-PROJECT OVERVIEW
- 
- This repository consists of a simple circuit power flow simulator. The user provides various component attributes that allow the program to follow through with a power flow analysis. The output of this program offers nodal voltages and current running through the circuit. The purpose of this program is to simulate a simple circuit consisting of a voltage source, a resistor, and a load. The user can provide voltages for both the voltage source and the load nominal voltage, as well as the load real power (in watts) and the resistance of the serial resistor (in ohms). 
+## **Project Overview**
+This repository contains a **simple circuit power flow simulator** designed to analyze a DC circuit. Users can define attributes for various components, including a voltage source, a resistor, and a load. The program computes the nodal voltages and currents in the circuit using user-provided input parameters.
 
-KEY FEATURES
+The goal of this simulator is to model a basic electrical circuit and calculate the following:  
+- **Nodal voltages** at specified buses  
+- **Current flow** through the circuit components  
 
--- User-defined voltage source, resistor, load, and busses
--- DC- power flow solution provided
-   -- Calculated nodal voltages incorporating dynamic voltage source
-   -- Calculated current flowing through the circuit
+The simulator supports real-world scenarios such as evaluating power flow for simple setups like powering an LED with a power supply and a current-limiting resistor.
 
-PROBLEM/REAL-WORLD APPLICATION
-Specifically, the program solves a simple DC circuit. The user can define the value of the voltage source for the circuit. Following that, the user can specify a series resistor that connects the voltage source to a load. Next, the user defines a load that connects to ground, which terminates the circuit. The user can define the real power and voltage of the load. Finally, the user can insert and define buses to calculate the nodal voltages at those buses. With this information, a solution class can solve the power flow to calculate the nodal voltages and current throughout the circuit. 
-This circuit can be applied to multiple real-world scenarios. This program can model the power flow in any event where a voltage source and a load are apparent. For example, this can be as simple as an LED being powered through a bench-top power supply, a current-limiting resistor, and then the LED. 
+---
 
-EQUATIONS USED
-1. Ohms Law: V (voltage) = I (amps) * R (ohms)
-2. Power: P (Watts) = I (amps) * V (volts)
-3. Conductance (given resistance): G (Siemens) = 1 / R (ohms)
-4. Conductance (given P and V): G = V^2 (volts) / P (Watts)
-DC-Power Flow KVL Loop
-- I (amps) = VSource (volts)/(R*in series + R*load (ohms) = total current flowing throughout circuit
-- Voltage source is connected to bus A --> Va = Vs
-- Resistor is connected between bus A and bus B
-- Load is connected to bus B --> Vb (volts) = I (amps) * R*load (ohms)
+## **Key Features**
+- **User-defined components**:
+  - Voltage source
+  - Resistor
+  - Load (real power and nominal voltage)
+  - Buses for nodal voltage calculation
+- **DC power flow analysis**:
+  - Dynamic calculation of nodal voltages
+  - Current flow computation through the circuit
+
+---
+
+## **Problem Statement / Real-World Application**
+This program simulates a simple DC circuit with the following configuration:  
+1. **Voltage Source**: Supplies power to the circuit.  
+2. **Series Resistor**: Limits the current flowing through the circuit.  
+3. **Load**: Consumes power and is connected to ground, terminating the circuit.  
+
+Users can define:  
+- The voltage of the source  
+- The resistance of the series resistor  
+- The real power and nominal voltage of the load  
+
+The simulator then calculates the **power flow**, including nodal voltages at user-defined buses and the current flowing through the circuit.  
+
+### **Applications**
+This circuit can represent numerous real-world scenarios, such as:  
+- An LED powered by a bench-top power supply with a current-limiting resistor  
+- Any basic circuit requiring a voltage source, a resistor, and a load  
+
+---
+
+## **Equations Used**
+The program relies on fundamental electrical engineering principles:  
+
+1. **Ohm's Law**:  
+   \[
+   V = I \cdot R
+   \]
+
+2. **Power Equation**:  
+   \[
+   P = I \cdot V
+   \]
+
+3. **Conductance (from resistance)**:  
+   \[
+   G = \frac{1}{R}
+   \]
+
+4. **Conductance (from power and voltage)**:  
+   \[
+   G = \frac{V^2}{P}
+   \]
+
+5. **DC Power Flow – Kirchhoff's Voltage Law (KVL) Loop**:  
+   \[
+   I = \frac{V_\text{source}}{R_\text{series} + R_\text{load}}
+   \]  
+   - \(I\): Total current flowing through the circuit  
+   - \(V_\text{a} = V_\text{s}\): Voltage source is connected to Bus A  
+   - \(V_\text{b} = I \cdot R_\text{load}\): Load is connected to Bus B  
+
+---
+
+## **How It Works**
+1. The user defines input parameters for:  
+   - Voltage source  
+   - Series resistor  
+   - Load (real power and nominal voltage)  
+   - Additional buses for nodal voltage calculation  
+
+2. The program calculates:  
+   - **Nodal voltages** at each bus  
+   - **Current flow** throughout the circuit  
+
+3. The output provides insights into the circuit's behavior, helping users analyze power flow.
+
+---
+
+## **Future Enhancements**
+- Support for AC circuit power flow analysis  
+- Multi-load configurations with parallel or series connections  
+- Integration of reactive components (inductors and capacitors)  
+- Visualization tools for circuit diagrams and voltage/current graphs  
+
+---
