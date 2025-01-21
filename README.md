@@ -44,35 +44,26 @@ This circuit can represent numerous real-world scenarios, such as:
 ---
 
 ## **Equations Used**
-The program relies on fundamental electrical engineering principles:  
+The program relies on fundamental electrical engineering principles:
 
 1. **Ohm's Law**:  
-   \[
-   V = I \cdot R
-   \]
+   V = I × R  
 
 2. **Power Equation**:  
-   \[
-   P = I \cdot V
-   \]
+   P = I × V  
 
 3. **Conductance (from resistance)**:  
-   \[
-   G = \frac{1}{R}
-   \]
+   G = 1 / R  
 
 4. **Conductance (from power and voltage)**:  
-   \[
-   G = \frac{V^2}{P}
-   \]
+   G = V² / P  
 
 5. **DC Power Flow – Kirchhoff's Voltage Law (KVL) Loop**:  
-   \[
-   I = \frac{V_\text{source}}{R_\text{series} + R_\text{load}}
-   \]  
-   - \(I\): Total current flowing through the circuit  
-   - \(V_\text{a} = V_\text{s}\): Voltage source is connected to Bus A  
-   - \(V_\text{b} = I \cdot R_\text{load}\): Load is connected to Bus B  
+   I = V_source / (R_series + R_load)  
+
+   - **I**: Total current flowing through the circuit  
+   - **V_a = V_s**: Voltage source is connected to Bus A  
+   - **V_b = I × R_load**: Load is connected to Bus B  
 
 ---
 
