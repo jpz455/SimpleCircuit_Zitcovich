@@ -1,3 +1,4 @@
+import numpy as np
 class Load:
     def __init__(self, name: str, bus1: str, p:float,v:float):
        self.name = name
@@ -6,12 +7,11 @@ class Load:
        self.v = v
        #P = I*V  --> I = P/V
        #V = IR   --> R = V/I
-       self.i = p/v
-       self.r = v/self.i
-       self.g = self.calc_g(self.r)
+       #G = I/V --> G = P/V^2
+       self.g=self.calc_g()
 
-    def calc_g(self,r:float):
-        return 1/r
+    def calc_g(self):
+        return self.p/self.v**2
 
 
 

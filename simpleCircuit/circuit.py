@@ -12,7 +12,7 @@ class Circuit:
         self.resistors: Dict[str,Resistor] = {}
         self.loads: Dict[str,Load] = {}
         self.vsource: VSource = None
-        self.i:float = 0.0
+        self.i:float = None
 
     def add_bus(self,bus:Bus):
         self.buses[bus.name] = bus

@@ -4,7 +4,6 @@ class Resistor:
         self.bus1 = bus1
         self.bus2 = bus2
         self.r = r
-        self.g = 0.0
         self.g = self.calc_g()
 
     def calc_g(self):

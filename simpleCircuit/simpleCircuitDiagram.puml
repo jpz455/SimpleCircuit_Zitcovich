@@ -1,0 +1,54 @@
+@startuml
+class Bus {
++name: str
++voltage: float
++set_bus_voltage(bus_v: float): void
+}
+class Resistor{
++name: str
++bus1: str
++bus2: str
++r: float
++g: float
++calc_g()
+}
+class VSource{
++name:str
++bus1: str
++v: float
+}
+class Load{
++name:str
++bus1:str
++p:float
++v:float
++r:float
++g:float
++calc_g()
+}
+class Circuit{
++name:str
++buses:dict[str,Bus]
++resistors:dict[str,Resistor]
++loads:dict[str,Load]
++vsource:VSource
++i:float
++add_bus(Bus)
++add_resistor_element(name:str,bus1:str,bus2:str,r:float)
++add_load_element(name:str,bus1:str,p:float,v:float)
++add_vsource_element(name:str,bus1:str,v:float)
++set_i(i:float)
++print_nodal_voltage()
++print_circuit_current()
+}
+class Solution{
++circuit:Circuit
++do_power_flow()
+}
+Solution<|--Circuit:contains
+Circuit<|-- Load:contains
+Circuit<|-- Resistor:contains
+Circuit<|-- VSource:contains
+Circuit<|-- Bus:many
+
+@enduml
