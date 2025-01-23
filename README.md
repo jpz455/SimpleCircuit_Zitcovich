@@ -176,4 +176,3 @@ The user can define the voltage source value, resistance, load voltage, load rea
 #### Determine and Calculate Bus Voltage:
 - **Bus A** = 200 V
 - **Bus B** = 200 - (1.5189 × 25) = 200 - 37.9725 = 162.025 V
-
