@@ -166,14 +166,12 @@ The user can define the voltage source value, resistance, load voltage, load rea
 - **Load**: Power = 1500 W; Voltage = 400 V
 
 #### Calculate Total Resistance:
-\[
-R_{\text{TOT}} = 25 \, \text{ohms} + \frac{400^2}{1500} = 131.67 \, \text{ohms}
-\]
 
-#### Calculate Circuit Current:
-\[
-I = \frac{200 \, \text{V}}{131.67 \, \text{ohms}} = 1.5189 \, \text{A}
-\]
+1. **Calculate Total Resistance**:  
+   `R_TOT = 25 ohms + (400^2 / 1500) = 131.67 ohms`
+
+2. **Calculate Circuit Current**:  
+   `I = 200 V / 131.67 ohms = 1.5189 A`
 
 #### Determine and Calculate Bus Voltage:
 - **Bus A** = 200 V
