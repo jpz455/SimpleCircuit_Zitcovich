@@ -2,20 +2,26 @@ from Bus import Bus as Bus
 from Resistor import Resistor as Resistor
 from Load import Load as Load
 from VSource import VSource as VSource
-
 from typing import Dict
 
 class Circuit:
+
     def __init__(self,name:str):
         self.name = name
+        #initialize dictionaries to expect string keys and object pairs
         self.buses: Dict[str,Bus] = {}
         self.resistors: Dict[str,Resistor] = {}
         self.loads: Dict[str,Load] = {}
-        self.vsource: VSource = None
-        self.i:float = None
+
+        self.vsource: VSource
+        self.i:float
 
     def add_bus(self,bus:Bus):
-        self.buses[bus.name] = bus
+        #error check if bus already exists in system
+        if bus.name in self.buses:
+            print(f"Bus with name '{bus.name}' already exists. Skipping addition.")
+        else:
+            self.buses[bus.name] = bus
 
     def add_resistor_element(self,name:str,bus1:str,bus2:str,r:float):
         self.resistors[name] = Resistor(name,bus1,bus2,r)

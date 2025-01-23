@@ -1,5 +1,5 @@
-import numpy as np
 class Load:
+
     def __init__(self, name: str, bus1: str, p:float,v:float):
        self.name = name
        self.bus1 = bus1
