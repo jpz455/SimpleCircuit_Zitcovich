@@ -121,35 +121,26 @@ This circuit can represent numerous real-world scenarios, such as:
 
 ## Relevant Equations
 
-1. **Ohm's Law**:
-   \[
-   V (\text{volts}) = I (\text{amps}) \times R (\text{ohms})
-   \]
+1. **Ohm's Law**:  
+   \( V \, (\text{volts}) = I \, (\text{amps}) \times R \, (\text{ohms}) \)
 
-2. **Power Equation**:
-   \[
-   P (\text{watts}) = I (\text{amps}) \times V (\text{volts})
-   \]
+2. **Power Equation**:  
+   \( P \, (\text{watts}) = I \, (\text{amps}) \times V \, (\text{volts}) \)
 
-3. **Conductance (from resistance)**:
-   \[
-   G (\text{siemens}) = \frac{1}{R} (\text{ohms})
-   \]
+3. **Conductance (from resistance)**:  
+   \( G \, (\text{siemens}) = \frac{1}{R} \, (\text{ohms}) \)
 
-4. **Conductance (from power and voltage)**:
-   \[
-   G (\text{siemens}) = \frac{V^2 (\text{volts})}{P (\text{watts})}
-   \]
+4. **Conductance (from power and voltage)**:  
+   \( G \, (\text{siemens}) = \frac{V^2 \, (\text{volts})}{P \, (\text{watts})} \)
 
-5. **DC Power Flow – Kirchhoff's Voltage Law (KVL) Loop**:
-   \[
-   I = \frac{V_{\text{source}}}{(R_{\text{series}} + R_{\text{load}})}
-   \]
+5. **DC Power Flow – Kirchhoff's Voltage Law (KVL) Loop**:  
+   \( I = \frac{V_{\text{source}}}{(R_{\text{series}} + R_{\text{load}})} \)
+
    - \( I \): Total current flowing through the circuit
    - \( V_A = V_{\text{source}} \): Voltage source is connected to Bus A
    - \( V_B = I \times R_{\text{load}} \): Load is connected to Bus B
-
----
+  
+   
 
 ## Example Case
 
