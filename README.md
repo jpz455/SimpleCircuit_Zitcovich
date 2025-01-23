@@ -122,25 +122,25 @@ This circuit can represent numerous real-world scenarios, such as:
 ## Relevant Equations
 
 1. **Ohm's Law**:  
-   \( V \, (\text{volts}) = I \, (\text{amps}) \times R \, (\text{ohms}) \)
+   `V (volts) = I (amps) * R (ohms)`
 
 2. **Power Equation**:  
-   \( P \, (\text{watts}) = I \, (\text{amps}) \times V \, (\text{volts}) \)
+   `P (watts) = I (amps) * V (volts)`
 
 3. **Conductance (from resistance)**:  
-   \( G \, (\text{siemens}) = \frac{1}{R} \, (\text{ohms}) \)
+   `G (siemens) = 1 / R (ohms)`
 
 4. **Conductance (from power and voltage)**:  
-   \( G \, (\text{siemens}) = \frac{V^2 \, (\text{volts})}{P \, (\text{watts})} \)
+   `G (siemens) = V^2 (volts) / P (watts)`
 
 5. **DC Power Flow – Kirchhoff's Voltage Law (KVL) Loop**:  
-   \( I = \frac{V_{\text{source}}}{(R_{\text{series}} + R_{\text{load}})} \)
+   `I = V_source / (R_series + R_load)`
 
-   - \( I \): Total current flowing through the circuit
-   - \( V_A = V_{\text{source}} \): Voltage source is connected to Bus A
-   - \( V_B = I \times R_{\text{load}} \): Load is connected to Bus B
+   - `I`: Total current flowing through the circuit
+   - `V_A = V_source`: Voltage source is connected to Bus A
+   - `V_B = I * R_load`: Load is connected to Bus B
   
-   
+ ---  
 
 ## Example Case
 
